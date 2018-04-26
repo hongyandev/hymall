@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>积分商城</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/weui.min.js"></script>
+    <script src="js/jquery-weui.min.js"></script>
+    <script src="js/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="js/lists.js"></script>
+</head>
+<body ontouchstart class="container">
+   <div class="tabar">
+        <ul>
+            <li class="curr" type="1">
+                <p>业务商品</p>
+            </li>
+            <li type="2">
+                <p>品牌商品</p>
+            </li>
+        </ul>
+   </div>
+   <div class="lists">
+       <ul class="goodList">
+           <!--<ul>
+               <li>
+                   <a class="clear block" href="javascript:void(0)">
+                       <div class="picList fle">
+                           <img src="images/pic.jpg"/>
+                       </div>
+                       <div class="picMargins">
+                           <p class="font16">工具箱</p>
+                           <p class="jf"><b class="font_red font18">3000</b><span> 积分</span></p>
+                       </div>
+                   </a>
+               </li>
+           </ul>-->
+
+       </ul>
+   </div>
+   <div class="weui-loadmore">
+       <i class="weui-loading"></i>
+       <span class="weui-loadmore__tips">正在加载</span>
+   </div>
+   <!--用户未注册-->
+   <div class="weAlert" style="display: none">
+       <div class="weui-mask"></div>
+       <div class="weui-dialog">
+           <div style="padding:20px;line-height:40px;"><p>错误提示</p><p class="msg">您还没有经过经销商认证或未曾关注经销商</p></div>
+       </div>
+   </div>
+</body>
+</html>

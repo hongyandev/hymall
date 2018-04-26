@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>积分商城订单</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/floating.min.css">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.cookie.min.js"></script>
+    <script src="js/weui.min.js"></script>
+    <script src="js/jquery-weui.min.js"></script>
+    <script type="text/javascript" src="js/order.js"></script>
+</head>
+<body>
+<div class="orderTab">
+    <ul>
+        <li class="fle curr">
+            <a href="javascript:void(0)">全部</a>
+        </li>
+        <li class="fle" status="0">
+            <a href="javascript:void(0)">未提交</a>
+        </li>
+        <li class="fle"  status="1">
+            <a href="javascript:void(0)">未确认</a>
+        </li>
+        <li class="fle"  status="2">
+            <a href="javascript:void(0)">已确认</a>
+        </li>
+        <li class="fle"  status="3">
+            <a href="javascript:void(0)">已关闭</a>
+        </li>
+    </ul>
+</div>
+<div style="padding-bottom:0;" class="shopping orderList clear">
+    <!--<div class="shopGroup orderGroup">
+        <div class="shopName orderName clear">
+            <h4 class="font14 fle"><a href="#">杭州鸿雁电器有限公司</a></h4>
+            <span class="fri">未提交</span>
+        </div>
+        <ul>
+            <li>
+                <div class="shopCon orderCon">
+                    <div class="shopImg"><a href="#"><img src="./images/pic.jpg" /></a></div>
+                    <div class="shopText">
+                        <h4>智能插座转换器</h4>
+                        <div class="shopBrief font13">规格：<span>20A</span></div>
+                        <div class="shopPrice">
+                            <div class="shopPices font12">积分<b class="price orderPrice font14">8000</b></div>
+                            <div class="fri font14">×<em class="orderNum">1</em></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="shopCon orderCon">
+                    <div class="shopImg"><a href="#"><img src="./images/pic.jpg" /></a></div>
+                    <div class="shopText">
+                        <h4 class="margins_top">智能插座转换器</h4>
+                        <div class="shopBrief font13">规格：<span>20A</span></div>
+                        <div class="shopPrice">
+                            <div class="shopPices fle">积分<b class="price orderPrice font14">10000</b></div>
+                            <div class="fri font14">×<em class="orderNum">1</em></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="priceTotal clear">
+            <div class="fle little_margins_top">合计积分：<span class="orderTotal">0</span></div>
+            <div class=" clear">
+                <a class="accountBtn fri" href="javascript:void(0)">结算</a>
+                <a class="deleteBtn fri" href="javascript:void(0)">删除</a>
+            </div>
+        </div>
+    </div>
+    <div class="shopGroup orderGroup">
+        <div class="shopName orderName clear">
+            <h4 class="font14 fle"><a href="#">杭州鸿雁电器有限公司</a></h4>
+            <span class="fri">未提交</span>
+        </div>
+        <ul>
+            <li>
+                <div class="shopCon orderCon">
+                    <div class="shopImg"><a href="#"><img src="./images/pic.jpg" /></a></div>
+                    <div class="shopText">
+                        <h4 class="margins_top">智能插座转换器</h4>
+                        <div class="shopBrief font13">规格：<span>20A</span></div>
+                        <div class="shopPrice">
+                            <div class="shopPices fle">积分<b class="price  font14" id="orderPrice">10000</b></div>
+                            <div class="fri font14">×<em id="orderNum">1</em></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="priceTotal clear">
+            <div class="fle little_margins_top">合计积分：<span class="orderTotal">0</span></div>
+            <div class="clear">
+                <a class="accountBtn fri" href="javascript:void(0)">结算</a>
+                <a class="deleteBtn fri" href="javascript:void(0)">删除</a>
+            </div>
+        </div>
+    </div>-->
+</div>
+<div class="weui-loadmore">
+    <i class="weui-loading"></i>
+    <span class="weui-loadmore__tips">正在加载</span>
+</div>
+<!--delete floating-->
+<div class="floating flDelete" style="display: none;">
+    <div class="flCenter clear">
+        <i class="closeIcon closed"></i>
+        <div class="flCon">
+            <p>您确定要删除这个订单吗？</p>
+            <div class="flBtn clear">
+                <a class="fle delBtn" href="javascript:void(0)">确定</a>
+                <a class="fle cancelBtn font_green" href="javascript:void(0)">取消</a>
+            </div>
+        </div>
+    </div>
+    <div class="flBg opacity_60"></div>
+</div>
+<!--部分商品已失效弹层-->
+<div class="floating flAlert" style="display:none">
+    <div class="fl-center">
+        <p class="flmsg"></p>
+        <ul class="clear align_center">
+            <li class="fle percentage_50">
+                <a class="btnSure font_green" href="lists.html">回首页逛逛</a>
+            </li>
+            <li class="fle percentage_50">
+                <a class="btnSure" href="order.html">确定</a>
+            </li>
+        </ul>
+    </div>
+    <div class="flBg opacity_60"></div>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        $(document).on("click","a.deleteBtn",function(){
+            $(".flDelete").fadeIn();
+        });
+        $(".closeIcon").on("click",function(){
+            $(".floating").fadeOut();
+        });
+        $(".cancelBtn").on("click",function(){
+            $(".floating").fadeOut();
+        })
+    })
+
+
+
+</script>
+</html>

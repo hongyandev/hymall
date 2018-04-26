@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>积分商城详情</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/floating.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/shopping.js"></script>
+    <script type="text/javascript" src="js/detail.js"></script>
+    <script src="js/jquery.cookie.min.js"></script>
+    <script>
+        var goodsId;
+    </script>
+
+</head>
+<body>
+<div class="swiper-container">
+    <ul class="swiper-wrapper">
+    </ul>
+    <!-- Add Pagination -->
+    <div style="width:6rem;right:1.5rem;bottom:2rem;" class="swiper-pagination"></div>
+</div>
+<div class="detailTit">
+    <!--<h3 class="font18">只能装置插座转换器转换器</h3>
+    <div><span class="font14">积分 </span><b class="font_red font18">3000</b></div>-->
+</div>
+<div class="standard clear">
+    <span class="font14 fle">规格：<b class="font16">20A</b></span>
+    <span class="font14 fri">库存：<b class="font16">287976</b></span>
+</div>
+<div class="xqTit align_center">
+    <div class="inline_block clear">
+        <div class="line fle"></div>
+        <span class="fle">详情</span>
+        <div class="line fle"></div>
+    </div>
+</div>
+<div class="detailCon"></div>
+<div class="footerNav clear">
+    <a href="buycar.html" class="buycar fle">
+        <em class="btm-act-icn">
+            <i class="order-numbers"></i>
+        </em>
+        <span class="focus-info">购物车</span>
+    </a>
+    <div class="submitBtn fle clear align_center">
+        <a id="addPro" class="fle bg_orange" href="javascript:void(0)">加入购物车</a>
+        <a id="buyIcon" class="fle bg_red" href="javascript:void(0)">立即兑换</a>
+    </div>
+</div>
+<div class="floating flBrief" style="display: none">
+    <div class="flBottom">
+        <div class="clear">
+            <div class="flImg fle">
+               <!-- <img src="images/pic.jpg"/>-->
+            </div>
+            <div class="flTit fle">
+                <p class="fong14">积分 <b class="font18 font_red flIntegral">3000</b></p>
+                <p class="font14">规格 <b class="flStandard">20A</b></p>
+            </div>
+            <i class="closeIcon fri"></i>
+        </div>
+        <div class="flNum clear">
+            <span class="fle font14">购买数量</span>
+            <div class="fri">
+                <div class="shopNum">
+                    <a href="javascript:void(0);" class="minus">－</a>
+                    <span class="num" >1</span>
+                    <a href="javascript:void(0);" class="plus">+</a>
+                </div>
+            </div>
+        </div>
+        <div class="margins_left margins_right margins_top">
+            <button class="sureBtn">确定</button>
+        </div>
+    </div>
+    <div class="flBg opacity_60"></div>
+</div>
+<!--加入购物车-->
+<div class="floating flAlert" style="display: none">
+    <div class="flCenter">
+        <p class="">已加入购物车</p>
+        <div class="flBg opacity_60"></div>
+    </div>
+</div>
+</body>
+</html>

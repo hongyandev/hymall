@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>提交订单</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/floating.min.css">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="js/orderSubmit.js"></script>
+</head>
+<body>
+<div class="shopping orderList orderSubmit clear">
+  <!--  <div class="shopGroup orderGroup">
+        <input type="hidden" name="code" value="123"/>
+        <div class="shopName orderName clear">
+            <h4 class="font14 fle"><a href="#">杭州鸿雁电器有限公司</a></h4>
+        </div>
+        <ul>
+            <li>
+                <div class="shopCon orderCon">
+                    <div class="shopImg"><a href="#"><img src="./images/pic.jpg" /></a></div>
+                    <div class="shopText">
+                        <h4>智能插座转换器</h4>
+                        <div class="shopBrief font13">规格：<span>20A</span></div>
+                        <div class="shopPrice">
+                            <div class="shopPices font12">积分<b class="price orderPrice font14">8000</b></div>
+                            <div class="fri font14">×<em class="orderNum">1</em></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="priceTotal">合计积分：<span class="shop-total-amount ShopTotal">0</span></div>
+    </div>-->
+</div>
+<div class="payment clear">
+    <a class="payBtn fri" href="javascript:void(0)">提交订单</a>
+</div>
+<!--部分商品已失效弹层-->
+<div class="floating flAlert" style="display:none">
+    <div class="fl-center">
+        <p class="flmsg"></p>
+        <ul class="clear align_center">
+            <li class="fle percentage_50">
+                <a class="btnSure font_green" href="lists.html">回首页逛逛</a>
+            </li>
+            <li class="fle percentage_50">
+                <a class="btnSure" href="order.html">确定</a>
+            </li>
+        </ul>
+    </div>
+    <div class="flBg opacity_60"></div>
+</div>
+</body>
+</html>

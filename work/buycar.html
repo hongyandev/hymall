@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>积分商城购物车</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/floating.min.css">
+    <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/shopping.js"></script>
+
+</head>
+<body>
+<div class="shopping clear">
+      <div class="shopGroup">
+          <!--  <div class="shopName clear">
+                <input type="checkbox" class="check shopCheck">
+                <h4 class="font14 khmc fle"><a href="#">杭州鸿雁电器有限公司</a></h4>
+                <div class="shopEdit fri"><span class="font14">编辑</span></div>
+            </div>
+           <ul>
+                 <li>
+                     <div class="shopCon">
+                         <input type="checkbox" class="check goodsCheck">
+                         <div class="shopImg"><a href="#"><img src="./images/pic.jpg" /></a></div>
+                         <div class="shopText">
+                             <div class="shoptit">
+                                 <h4></h4>
+                                 <div class="shopBrief font12"></div>
+                             </div>
+                             <div class="shopPrice">
+                                 <div class="shopPices font12"></div>
+                                 <div class="shopNum">
+                                     <a href="javascript:void(0);" class="minus">－</a>
+                                     <span class="num" >1</span>
+                                     <a href="javascript:void(0);" class="plus">+</a>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+
+             </ul>
+             <div class="priceTotal">合计积分：<span class="shop-total-amount ShopTotal">0</span></div>-->
+         </div>
+</div>
+<div class="payment clear">
+    <div class="allCheckbox fle"><input type="checkbox" class="check" id="allCheck">全选</div>
+    <a class="payBtn fri" href="javascript:void(0)">立即兑换</a>
+</div>
+<!--delete floating-->
+<div class="floating" style="display: none;">
+    <div class="flCenter clear">
+        <i class="closeIcon closed"></i>
+        <div class="flCon">
+            <p>您确定要删除这个商品吗？</p>
+            <div class="flBtn clear">
+                <a class="fle delBtn" href="javascript:void(0)">确定</a>
+                <a class="fle cancelBtn font_green" href="javascript:void(0)">取消</a>
+            </div>
+        </div>
+    </div>
+    <div class="flBg opacity_60"></div>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        $(".closeIcon").on("click",function(){
+            $(".floating").fadeOut();
+        });
+        $(".cancelBtn").on("click",function(){
+            $(".floating").fadeOut();
+        })
+    })
+</script>
+</html>
+
+
