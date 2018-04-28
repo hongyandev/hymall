@@ -44,7 +44,7 @@ $(function () {
         }
         $.ajax({
             type: 'POST',
-            url: 'http://sge.cn:9090/erp/api/settlementOrder',
+            url: 'http://sge.cn/erp/api/settlementOrder',
             data: {
                 'userid': $.cookie("userid"),
                 'codes':codes
