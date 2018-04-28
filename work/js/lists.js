@@ -43,7 +43,7 @@ function getData(page,type) {
 
     $.ajax({
         type:"POST",
-        url:"http://sge.cn:9090/erp/api/storeHomePage",
+        url:"http://sge.cn/erp/api/storeHomePage",
         data: {
             "userid":$.cookie("userid"),
             "type": type,
@@ -99,7 +99,7 @@ function getData(page,type) {
 function getDetail(goodsId) {
     $.ajax({
         type:'post',
-        url:'http://sge.cn:9090/erp/api/goodsInfo',
+        url:'http://sge.cn/erp/api/goodsInfo',
         data:{"goodsid": goodsId},
         success:function (res) {
             console.info(res);
