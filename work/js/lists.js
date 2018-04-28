@@ -8,7 +8,7 @@ var userid = (getQueryString('userid')!=null ? getQueryString('userid') : null);
 $.cookie("userid",userid);
 
 var page=1;
-var pageSize=4;
+var pageSize=6;
 var loading = false;
 
 $(function () {
