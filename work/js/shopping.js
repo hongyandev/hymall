@@ -2,7 +2,7 @@
 $(function () {
     $.ajax({
         type:"POST",
-        url:"http://sge.cn:9090/erp/api/cartItems",
+        url:"http://sge.cn/erp/api/cartItems",
         data:{
               "userid":$.cookie("userid")
           },
@@ -66,7 +66,7 @@ $(function () {
         }
         $.ajax({
             type:"POST",
-            url:"http://sge.cn:9090/erp/api/createOrder",
+            url:"http://sge.cn/erp/api/createOrder",
             data:{
                 "userid":$.cookie("userid"),
                 "goodsids":goodsId
@@ -89,7 +89,7 @@ $(function () {
             console.info(goodsId);
             $.ajax({
                 type:"POST",
-                url:"http://sge.cn:9090/erp/api/updateCartGoods",
+                url:"http://sge.cn/erp/api/updateCartGoods",
                 data:{
                     "userid":$.cookie("userid"),
                     "goodsid":goodsId,
@@ -230,7 +230,7 @@ function updateCartGoods(goodsid,qty) {
    // console.info(typeof (qty))
     $.ajax({
         type:"POST",
-        url:"http://sge.cn:9090/erp/api/updateCartGoods",
+        url:"http://sge.cn/erp/api/updateCartGoods",
         data:{
             "userid":$.cookie("userid"),
             "goodsid":goodsid,
