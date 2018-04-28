@@ -12,7 +12,7 @@ function detail(goodsIdVal) {
             goodsId=detailURL.substring(pos_start);
             $.ajax({
                 type:'post',
-                url:'http://sge.cn:9090/erp/api/goodsInfo',
+                url:'http://sge.cn/erp/api/goodsInfo',
                 data:{"goodsid":goodsId},
                 dataType:"json",
                 success:function (res) {
@@ -67,7 +67,7 @@ $(function () {
         var num=parseInt($(".shopNum .num").text());
         $.ajax({
             type: 'POST',
-            url: 'http://sge.cn:9090/erp/api/updateCartGoods',
+            url: 'http://sge.cn/erp/api/updateCartGoods',
             data: {
                 'userid': $.cookie("userid"),
                 'goodsid': goodsId,'qty':num
