@@ -58,34 +58,54 @@ $(function () {
     });
     $("#addPro").on("click",function () {
         $(".flBrief").fadeIn();
-
+        $(".sureBtn").attr("title","addPro");
     });
     $("#buyIcon").on("click",function () {
         $(".flBrief").fadeIn();
+        $(".sureBtn").attr("title","payPro");
     })
     $(".sureBtn").on("click",function (e) {
         var num=parseInt($(".shopNum .num").text());
+        var title = $(this).attr("title");
         $.ajax({
             type: 'POST',
             url: 'http://sge.cn/erp/api/updateCartGoods',
             data: {
                 'userid': $.cookie("userid"),
-                'goodsid': goodsId,'qty':num
+                'goodsid': goodsId,
+                'qty':num
             },
             success: function(data){
                 if(data.code<0){
                     alert('添加失败！');
                 }else {
-                    //alert("已添加至购物车");
-                    //console.info(goodsId)
-                    $(".flAlert").show().fadeOut(2000);
+                    if(title == "addPro"){
+                        $(".flAlert").show().fadeOut(2000);
+                        $(".flBrief").fadeOut();
+                    }else if(title == "payPro"){
+                        $.ajax({
+                            type:"POST",
+                            url:"http://sge.cn/erp/api/createOrder",
+                            data:{
+                                "userid":$.cookie("userid"),
+                                "goodsids":goodsId
+                            },
+                            dataType:"json",
+                            success:function (res) {
+                                if(res.code==200){
+                                    $.cookie('createOrderData',JSON.stringify(res.data));
+                                    window.location.href="orderSubmit.html";
+                                }
+                            }
+                        });
+                    }
+
                 }
             },
             error: function(){
                 alert('添加购物车商品出错！请检查响应消息！');
             }
         });
-        $(".flBrief").fadeOut();
 
     })
 })
