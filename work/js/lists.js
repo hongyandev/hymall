@@ -55,11 +55,11 @@ function getData(page,type) {
             if(res.code==200){
                 //console.info(res.data.goods.totalRow);
                 var str="";
-                if(res.data.goods.totalRow == 0){
-                    console.info(res.data.order.totalRow);
+                if(res.data.goods.totalRow == '0'){
+                    console.info(res.data.goods.totalRow);
                     $(".weui-loadmore").hide();
-                    str+=" <div class='empty align_center'><span>您还没有订单哦！</span></div>"
-                    $(".orderList").append(str);
+                    str+=" <div class='empty align_center'><span>业务商品为空！</span></div>"
+                    $(".goodList").html(str);
                     return;
                 };
                 if(res.data.goods.list.length > 0){
