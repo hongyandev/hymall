@@ -36,7 +36,7 @@ function getOrders(page,status){
 
     $.ajax({
         type:"POST",
-        url:"http://sge.cn:9090/erp/api/queryOrder",
+        url:"http://sge.cn/erp/api/queryOrder",
         data:{
             "userid":$.cookie("userid"),
             "status":status,
@@ -121,7 +121,7 @@ function getOrders(page,status){
 function settlementOrder(userid,codes){
     $.ajax({
         type:"POST",
-        url:"http://sge.cn:9090/erp/api/settlementOrder",
+        url:"http://sge.cn/erp/api/settlementOrder",
         data:{
             "userid":$.cookie("userid"),
             "codes":codes
@@ -153,7 +153,7 @@ function delOrder(userid,code){
     $(".delBtn").on("click",function(){
         $.ajax({
             type:"POST",
-            url:"http://sge.cn:9090/erp/api/delOrder",
+            url:"http://sge.cn/erp/api/delOrder",
             data:{
                 "userid":userid,
                 "code":code
