@@ -56,7 +56,7 @@ function getData(page,type) {
                 //console.info(res.data.goods.totalRow);
                 var str="";
                 if(res.data.goods.totalRow == '0'){
-                    console.info(res.data.goods.totalRow);
+                    //console.info(res.data.goods.totalRow);
                     $(".weui-loadmore").hide();
                     str+=" <div class='empty align_center'><span>业务商品为空！</span></div>"
                     $(".goodList").html(str);
