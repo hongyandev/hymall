@@ -4,17 +4,17 @@ var pageSize=5;
 var loading = false;
 $(function () {
     $(".orderTab ul li").on("click",function () {
-        $(this).addClass("curr").siblings().removeClass("curr");
+        $(this).stop().addClass("curr").siblings().stop().removeClass("curr");
         var status=$(this).attr("status");
-        //$.cookie("status",status);
-        //切换加载
-        $(".orderList").html("");
         page=1;
-        getOrders(page,$(".curr").attr("status"));
+        //切换加载
+        loading=false;
+        $(".orderList").html("");
+        getOrders(page,status);
 
     });
     //初始化加载
-    getOrders(page);
+    getOrders(page,$(".curr").attr("status"));
 
     //上拉加载
     $(document.body).infinite().on("infinite", function() {
@@ -25,12 +25,15 @@ $(function () {
         setTimeout(function() {
             getOrders(page,$(".curr").attr("status"));
             loading = false;
-        }, 2000);
+        }, 300);
 
     });
 });
 //获取订单数据
 function getOrders(page,status){
+    //进来时候加载
+    $(".weui-loadmore").html("<i class=\"weui-loading\"></i><span class=\"weui-loadmore__tips\">正在加载</span>");
+
     $.ajax({
         type:"POST",
         url:"http://sge.cn:9090/erp/api/queryOrder",
@@ -103,7 +106,7 @@ function getOrders(page,status){
                     $(".weui-loadmore").show();
                    // return;
                 }
-                if(res.data.order.totalPage < page ){
+                if(res.data.order.totalPage == page ){
                     loading=true;
                     $(".weui-loadmore").html("<span class=\"weui-loadmore__tips\">我已经到底了...</span>");
                     return;
