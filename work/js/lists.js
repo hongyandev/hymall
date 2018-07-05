@@ -23,9 +23,9 @@ $(function () {
     });
     //初始化加载
     getData(page,1);
-
+    $(document.body).infinite(200);
     //上拉加载
-    $(document.body).infinite().on("infinite", function() {
+    $(document.body).infinite(200).on("infinite", function() {
         console.log(loading);
         if(loading) return;
         loading = true;
