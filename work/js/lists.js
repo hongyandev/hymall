@@ -32,9 +32,10 @@ $(function () {
         page=++page;
         setTimeout(function() {
             getData(page,$(".curr").attr("type"));
-            loading = false;
+            loading = true;
         }, 300);
     });
+    //$(document.body).destroyInfinite();
 });
 
 function getData(page,type) {
@@ -65,13 +66,13 @@ function getData(page,type) {
                 if(res.data.goods.list.length > 0){
                     $.each(res.data.goods.list,function (index,val){
                         str+="<li>" +
-                            "<a class='clear block' href='detail.html?goodsId="+val.goodsId+"'>" +
-                            "<div class='picList fle'><img src='"+val.imageUrl+"?x-oss-process=image/resize,l_100'/></div>" +
-                            "<div class=\"picMargins\">" +
-                            "<p class='font16'>"+val.goodsName+"</p>" +
-                            "<p class='jf'><b class='font_red font18'>"+val.integral+"</b><span> 积分</span></p>" +
-                            "</div>" +
-                            "</a>" +
+                                "<a class='clear block' href='detail.html?goodsId="+val.goodsId+"'>" +
+                                    "<div class='picList fle'><img src='"+val.imageUrl+"?x-oss-process=image/resize,l_100'/></div>" +
+                                    "<div class=\"picMargins\">" +
+                                        "<p class='font16'>"+val.goodsName+"</p>" +
+                                        "<p class='jf'><b class='font_red font18'>"+val.integral+"</b><span> 积分</span></p>" +
+                                    "</div>" +
+                                "</a>" +
                             "</li>";
                     });
                     $('.goodList').append(str);
