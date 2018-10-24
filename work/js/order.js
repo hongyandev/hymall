@@ -1,3 +1,10 @@
+//获取userid
+function getQueryString(name){
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if(r!=null) return unescape(decodeURIComponent(r[2]));return null;
+}
+var userid = (getQueryString('userid')!=null ? getQueryString('userid') : null);
 $.cookie("userid",userid);
 //订单切换
 var page=1;
