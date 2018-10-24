@@ -5,6 +5,7 @@ function getQueryString(name){
     if(r!=null) return unescape(decodeURIComponent(r[2]));return null;
 }
 var userid = (getQueryString('userid')!=null ? getQueryString('userid') : null);
+$.cookie("userid",userid);
 $(function () {
     $.ajax({
         type:"POST",
