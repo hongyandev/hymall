@@ -6,6 +6,7 @@ function getQueryString(name){
 }
 var userid = (getQueryString('userid')!=null ? getQueryString('userid') : null);
 $.cookie("userid",userid);
+
 //订单切换
 var page=1;
 var pageSize=5;
