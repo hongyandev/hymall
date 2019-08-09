@@ -1,0 +1,165 @@
+a,address,b,big,blockquote,body,center,cite,code,dd,del,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,input,ins,label,legend,li,menu,ol,p,pre,small,span,strong,u,ul,var{
+    margin:0;
+    padding:0
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0
+}
+a img,fieldset,img{
+    border:0
+}
+img{
+    vertical-align:middle
+}
+address,caption,cite,code,dfn,em,i,strong,th,var{
+    font-style:normal;
+    font-weight:400
+}
+menu,ol,ul{
+     list-style:none
+ }
+:focus{
+    outline:0
+}
+em{
+    font-style:normal
+}
+span{
+    font-weight:400
+}
+mark{
+    background:0 0
+}
+b,h1,h2,h3,h4,h5,h6{
+    font-weight:400
+}
+button,input[type=button],input[type=reset],input[type=submit]{
+    -webkit-appearance:none
+}
+body,input,textarea{
+    font-family:'微软雅黑',Arial,Helvetica,sans-serif
+}
+a{
+    text-decoration:none;
+    color:#4d4d4d
+}
+body{
+    color:#4d4d4d;
+    background:#f5f5f5
+}
+input{
+    outline:0
+}
+.clear{
+    zoom:1
+}
+.clear:after{
+    content:".";
+    height:0;
+    visibility:hidden;
+    display:block;
+    clear:both
+}
+.hidden{
+    overflow:hidden;
+}
+.fle{
+    float: left;
+}
+.fri{
+    float: right;
+}
+.intTop{
+    position: fixed;
+    width: 100%;
+    height: 230px;
+    top: 0;
+    z-index: 999;
+}
+.intBg{
+    width:100%;
+    height:180px;
+    background-color:#18c992;
+    color:#fff;
+    position:relative;
+}
+.intTime{
+    display: inline-block;
+    padding:0 10px;
+    background: #d1ebee;
+    border-radius:10px;
+    position: absolute;
+    top:5px;
+    left:50%;
+    margin-left:-52px;
+}
+.intTime select{
+    background: none;
+    font-size:12px;
+    border:none;
+    color:#18c992;
+}
+.intNum{
+    position:absolute;
+    min-width:200px;
+    text-align:center;
+    top:40%;
+    left:50%;
+    margin-top:-7px;
+    margin-left:-100px;
+    font-size:12px;
+}
+.intNum b{
+    font-size:28px;
+}
+.intBg span{
+    position:absolute;
+    top:42%;
+    margin-top:30px;
+    left:50%;
+    margin-left:-52px;
+    font-size: 12px;
+}
+.intType{
+    width:100%;
+    text-align:center;
+    background-color: #fff;
+}
+.intType ul li{
+    width:50%;
+    font-size:14px;
+}
+.intType ul li p{
+    border:1px solid #e5e5e5;
+    padding:5px 0;
+}
+.intType ul li:last-child p{
+    border-left:none;
+}
+.intType ul li.active p{
+    border-bottom:1px solid #18c992;
+    color:#18c992;
+}
+.intLists{
+    font-size:12px;
+    padding-top:230px;
+}
+.intLists ul li{
+    padding:5px 15px;
+    border-bottom:1px solid #e5e5e5;
+    position:relative;
+}
+.intLists ul li .intInfo{
+    padding-right:25px;
+}
+.intLists ul li strong{
+    position:absolute;
+    top:50%;
+    margin-top:-8px;
+    right:15px;
+}
+.intLists ul li time{
+    color:#999;
+}
+

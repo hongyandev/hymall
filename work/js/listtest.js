@@ -6,11 +6,9 @@ function getQueryString(name){
 }
 var userid = (getQueryString('userid')!=null ? getQueryString('userid') : null);
 $.cookie("userid",userid);
-
 $(function() {
     FastClick.attach(document.body);
 });
-
 var page=1;
 var pageSize=6;
 var loading = false;
@@ -29,7 +27,7 @@ $(function () {
     getData(page,1);
     $(document.body).infinite(200);
     //上拉加载
-    $(document.body).infinite(200).on("infinite", function() {
+    $(document.body).infinite().on("infinite", function() {
         console.log(loading);
         if(loading) return;
         loading = true;
@@ -39,7 +37,6 @@ $(function () {
             loading = true;
         }, 300);
     });
-    //$(document.body).destroyInfinite();
 });
 
 function getData(page,type) {
@@ -70,13 +67,13 @@ function getData(page,type) {
                 if(res.data.goods.list.length > 0){
                     $.each(res.data.goods.list,function (index,val){
                         str+="<li>" +
-                                "<a class='clear block' href='detail.html?goodsId="+val.goodsId+"'>" +
-                                    "<div class='picList fle'><img src='"+val.imageUrl+"?x-oss-process=image/resize,l_100'/></div>" +
-                                    "<div class=\"picMargins\">" +
-                                        "<p class='font16'>"+val.goodsName+"</p>" +
-                                        "<p class='jf'><b class='font_red font18'>"+val.integral+"</b><span> 积分</span></p>" +
-                                    "</div>" +
-                                "</a>" +
+                            "<a class='clear block' href='detail.html?goodsId="+val.goodsId+"'>" +
+                            "<div class='picList fle'><img src='"+val.imageUrl+"?x-oss-process=image/resize,l_100'/></div>" +
+                            "<div class=\"picMargins\">" +
+                            "<p class='font16'>"+val.goodsName+"</p>" +
+                            "<p class='jf'><b class='font_red font18'>"+val.integral+"</b><span> 积分</span></p>" +
+                            "</div>" +
+                            "</a>" +
                             "</li>";
                     });
                     $('.goodList').append(str);
@@ -111,7 +108,6 @@ function getDetail(goodsId) {
         }
     })
 }
-
 
 
 
