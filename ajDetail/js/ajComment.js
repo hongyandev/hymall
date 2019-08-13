@@ -19,7 +19,7 @@ $(function () {
         url:'https://wx.hongyancloud.com/wxDev/sellactivity/getSellActivity?id='+aid+'&uid='+uid,
         success:function (res) {
             if (res.code == '00000') {
-                $(".comTitle").html(res.data.title)
+                $("#comTitle").append(res.data.title)
             }
         }
     });
