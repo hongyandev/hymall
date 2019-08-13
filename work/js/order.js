@@ -174,5 +174,12 @@ function delOrder(userid,code){
             }
         })
     })
+}
 
+function sure() {
+    window.location.reload()
+}
+
+function goBackIndex() {
+    window.location.href = "lists.html?userid="+$.cookie("userid")
 }
