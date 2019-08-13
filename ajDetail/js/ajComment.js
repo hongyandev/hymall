@@ -10,16 +10,17 @@ function GetRequest() {
     }
     return theRequest;
 }
-var urlRequest = GetRequest();
-var uid = urlRequest.uid;
-var aid = urlRequest.id;
+
 $(function () {
+    var urlRequest = GetRequest();
+    var uid = urlRequest.uid;
+    var aid = urlRequest.id;
     $.ajax({
         type:'get',
         url:'https://wx.hongyancloud.com/wxDev/sellactivity/getSellActivity?id='+aid+'&uid='+uid,
         success:function (res) {
             if (res.code == '00000') {
-                $("#comTitle").append(res.data.title)
+                $("#comTitle").append(res.data.title);
             }
         }
     });
