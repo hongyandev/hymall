@@ -62,6 +62,11 @@ $(function () {
                         '        </li>'
                 }
                 $(".comLists").html(str);
+
+                $(".com").on('click',function () {
+                    location.href='comment.html?id='+aid+'&uid='+uid
+                });
+
                 var artzan = res.data.zan;
                 $(".artZan").on("click", function () {
                     if (artzan == '0') {
@@ -128,4 +133,7 @@ $(function () {
     })
 
 });
+function com() {
+
+}
 

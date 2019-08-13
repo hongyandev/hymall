@@ -11,8 +11,8 @@ function GetRequest() {
     return theRequest;
 }
 var urlRequest = GetRequest();
-var uid = 180309090532;//urlRequest.uid;
-var aid = 58;//urlRequest.id;
+var uid = urlRequest.uid;
+var aid = urlRequest.id;
 $(function () {
     $.ajax({
         type:'get',
