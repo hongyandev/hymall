@@ -36,7 +36,7 @@ $(function () {
             },
             success:function (res) {
                 if (res.code == '00000') {
-                    location.href='ajDetail.html';
+                    location.href='ajDetail.html?id='+aid+'&uid='+uid
                 }
             }
         })
