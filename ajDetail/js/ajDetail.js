@@ -25,11 +25,11 @@ $(function () {
                 $(".weui-article time").html(res.data.createDate);
                 $(".ajContent").html(res.data.content);
                 $(".reads").html(res.data.reads);
-                $(".zan").html(res.data.zan);
-                if (res.data.zans == '1') {
+                $(".zan").html(res.data.zans);
+                if (res.data.zan == '1') {
                     $(".artZan").addClass('zanActive')
                 } else {
-                    if (res.data.zan == '0') {
+                    if (res.data.zans == '0') {
                         $(".artZan em").html("")
                     }
                     $(".artZan").removeClass('zanActive')
